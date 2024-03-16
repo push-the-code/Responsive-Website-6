@@ -162,6 +162,22 @@
                 font-weight: 500;
             }
             
+            #footer {
+                text-align: center;
+                margin: 16px 0;
+            }
+            #footer > p {
+                margin: 64px auto;
+            }
+            #footer > .social-links {
+                font-size: 18px;
+                margin: 64px 15px;
+                border: 1px solid;
+            }
+            #footer > .social-links:hover {
+                opacity: 0.75;
+            }
+            
             @media only screen and (max-width: 770px) {
                 #navbar {
                     display: none;
@@ -292,15 +308,16 @@
         </main>
         
         <footer id="footer">
-            <p>
-                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <p class="social-links">
+                <a href="#" style=""><i class="fa-brands fa-square-facebook"></i></a>
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
                 <a href="#"><i class="fa-brands fa-snapchat"></i></a>
                 <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                <a href="#"></a>
-                <a href="#"><i></i></a>
-                
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
             </p>
+            
+            <p>Powered by <span style="text-decoration: underline;">Pushkar!</span></p>
         </footer>
         
         <script type="text/javascript" charset="utf-8">
