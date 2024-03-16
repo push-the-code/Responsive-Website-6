@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <style type="text/css" media="all">
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Verdana", Sans-Serif;
+            }
+            a {
+                text-decoration: none;
+            }
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+            .navbar-small {
+                display: none;
+                transition: 0.5s;
+            }
+            #navbar {
+                top: 0;
+                width: 100%;
+                position: fixed;
+                background: #f44336;
+                display: inline-block;
+                box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+            }
+            #navbar > a {
+                color: #ffffff;
+                margin: 0;
+                padding: 12px 20px;
+                float: left;
+                transition: 0.25s;
+            }
+            #navbar > a:hover {
+                background: #ffffff;
+                color: #f44336;
+                cursor: pointer;
+            }
+            #header {
+                width: 100%;
+                line-height: 1.5;
+                padding: 110px 0;
+                text-align: center;
+                display: inline-block;
+                background: #f44336;
+            }
+            #header > h1 {
+                margin: 20px;
+                color: #ffffff;
+                font-size: 60px;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+            #header > p {
+                margin: 20px;
+                color: #ffffff;
+                font-size: 22px;
+                text-transform: capitalize;
+            }
+            #header > button {
+                border: 0;
+                margin: 20px;
+                color: #f44336;
+                cursor: pointer;
+                padding: 12px 20px;
+                background: #ffffff;
+            }
+            #header > button:hover {
+                color: #ffffff;
+                background: #f44336;
+                border: 0.1px solid;
+            }
+            
+            @media only screen and (max-width: 770px) {
+                #navbar {
+                    display: none;
+                }
+                .navbar-small {
+                    top: 0;
+                    width: 100%;
+                    display: flex;
+                    position: fixed;
+                    background: #f44336;
+                    flex-direction: column;
+                    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+                }
+                .navbar-small > .nav-menu {
+                    display: inline-block;
+                    width: 100%;
+                }
+                .navbar-small > .nav-menu > a {
+                    color: #ffffff;
+                    margin: 0;
+                    padding: 12px 20px;
+                    transition: 0.25s;
+                }
+                .navbar-small > .nav-menu > a:hover {
+                    background: #ffffff;
+                    color: #f44336;
+                    cursor: pointer;
+                }
+                .navbar-small > .hidden {
+                    display: none;
+                    text-align: center;
+                    margin: 0;
+                    color: #ffffff;
+                    transition: 0.5s;
+                }
+                .navbar-small > .hidden > a {
+                    width: 100%;
+                    float: none;
+                    display: block;
+                    padding: 12px 0;
+                    color: #ffffff;
+                    transition: 0.25s;
+                }
+                .navbar-small > .hidden > a:hover {
+                    background: #ffffff;
+                    color: #f44336;
+                    cursor: pointer;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navbar-small">
+            <section class="nav-menu">
+                <a href="#" style="float: left;">Home</a>
+                <a class="nav-btn" href="#" style="float: right;" onclick="open_nav()"><i class="fa fa-bars"></i></a>
+            </section>
+            <section class="hidden">
+                <a class="link" href="#">Link 1</a>
+                <a class="link" href="#">Link 2</a>
+                <a class="link" href="#">Link 3</a>
+                <a class="link" href="#">Link 4</a>
+            </section>
+        </div>
+        <nav id="navbar">
+            <a href="#">Home</a>
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+            <a href="#">Link 4</a>
+        </nav>
+        <header id="header">
+            <h1>start page</h1>
+            <p>template by <span style="text-decoration: underline;">pushkar</span></p>
+            <button type="button">Get Started</button>
+        </header>
+        
+        <script type="text/javascript" charset="utf-8">
+            const menu = document.querySelector('.hidden');
+            const btn = document.querySelector('.nav-btn');
+            console.log(menu);
+            function open_nav () {
+                if (menu.style.display == 'block') {
+                    menu.style.display = 'none';
+                    btn.innerHTML = menu ? '<i class="fa fa-bars"></i>':'<i class="fa fa-close"></i>'
+                } else {
+                    menu.style.display = 'block';
+                    btn.innerHTML = menu ? '<i class="fa fa-close"></i>':'<i class="fa fa-bars"></i>'
+                }
+            }
+        </script>
+    </body>
+</html>
