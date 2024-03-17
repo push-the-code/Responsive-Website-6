@@ -54,21 +54,21 @@
                 background: #f44336;
             }
             #header > h1 {
-                margin: 20px;
+                margin: 20px 0;
                 color: #ffffff;
                 font-size: 64px;
                 font-weight: 400;
                 text-transform: uppercase;
             }
             #header > p {
-                margin: 20px;
+                margin: 20px 0;
                 color: #ffffff;
                 font-size: 22px;
                 text-transform: capitalize;
             }
             #header > button {
                 border: 0;
-                margin: 20px;
+                margin: 20px 0;
                 color: #f44336;
                 cursor: pointer;
                 padding: 12px 20px;
@@ -92,6 +92,7 @@
                 padding: 16px 64px;
                 line-height: 1.5;
                 float: left;
+                text-align: justify;
             }
             main > .first > .content > h1 {
                 margin: 64px 0;
@@ -138,6 +139,7 @@
                 padding: 16px 64px;
                 line-height: 1.5;
                 float: left;
+                text-align: justify;
             }
             main > .second > .content > h1 {
                 margin: 64px 0;
@@ -225,6 +227,49 @@
                     background: #ffffff;
                     color: #f44336;
                     cursor: pointer;
+                }
+                
+                #header {
+                    width: 100%;
+                    display: inline-block;
+                }
+                
+                main > .first {
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0;
+                }
+                main > .first > .content {
+                    float: none;
+                    width: 100%;
+                    margin: 0;
+                    text-align: justify;
+                }
+                main > .first > .img {
+                    float: none;
+                    width: 100%;
+                    margin: 50px 0;
+                }
+                
+                main > .second {
+                    display: inline-block;
+                    width: 100%;
+                    margin: 0;
+                }
+                main > .second > .content {
+                    float: none;
+                    width: 100%;
+                    margin: 0;
+                    text-align: justify;
+                }
+                main > .second > .img {
+                    float: none;
+                    width: 100%;
+                    margin: 50px 0;
+                }
+                main > .third {
+                    width: 100%;
+                    display: inline-block;
                 }
             }
         </style>
